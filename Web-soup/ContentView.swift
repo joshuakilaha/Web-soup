@@ -6,16 +6,23 @@
 //
 
 import SwiftUI
+import SwiftSoup
 
 struct ContentView: View {
+    
+    @ObservedObject var data = ScrapperViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            List {
+                ForEach(data.housePlant, id: \.id) { plant in
+                    Text(plant.title)
+                }
+            }
         }
-        .padding()
+        .onAppear {
+            data.getPlant()
+        }
     }
 }
 

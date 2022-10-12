@@ -11,6 +11,9 @@
 		204DBB4028F5B0E7008E921C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DBB3F28F5B0E7008E921C /* ContentView.swift */; };
 		204DBB4228F5B0EA008E921C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 204DBB4128F5B0EA008E921C /* Assets.xcassets */; };
 		204DBB4528F5B0EA008E921C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 204DBB4428F5B0EA008E921C /* Preview Assets.xcassets */; };
+		204DBB4D28F5B143008E921C /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 204DBB4C28F5B143008E921C /* SwiftSoup */; };
+		204DBB5028F5B175008E921C /* ScrapperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DBB4F28F5B175008E921C /* ScrapperViewModel.swift */; };
+		204DBB5428F5E366008E921C /* HousePlant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DBB5328F5E366008E921C /* HousePlant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,8 @@
 		204DBB3F28F5B0E7008E921C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		204DBB4128F5B0EA008E921C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		204DBB4428F5B0EA008E921C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		204DBB4F28F5B175008E921C /* ScrapperViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrapperViewModel.swift; sourceTree = "<group>"; };
+		204DBB5328F5E366008E921C /* HousePlant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousePlant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				204DBB4D28F5B143008E921C /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +57,9 @@
 		204DBB3C28F5B0E7008E921C /* Web-soup */ = {
 			isa = PBXGroup;
 			children = (
+				204DBB5228F5E351008E921C /* View */,
+				204DBB5128F5E34B008E921C /* Model */,
+				204DBB4E28F5B14B008E921C /* ViewModel */,
 				204DBB3D28F5B0E7008E921C /* Web_soupApp.swift */,
 				204DBB3F28F5B0E7008E921C /* ContentView.swift */,
 				204DBB4128F5B0EA008E921C /* Assets.xcassets */,
@@ -65,6 +74,29 @@
 				204DBB4428F5B0EA008E921C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		204DBB4E28F5B14B008E921C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				204DBB4F28F5B175008E921C /* ScrapperViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		204DBB5128F5E34B008E921C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				204DBB5328F5E366008E921C /* HousePlant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		204DBB5228F5E351008E921C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +115,9 @@
 			dependencies = (
 			);
 			name = "Web-soup";
+			packageProductDependencies = (
+				204DBB4C28F5B143008E921C /* SwiftSoup */,
+			);
 			productName = "Web-soup";
 			productReference = 204DBB3A28F5B0E7008E921C /* Web-soup.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +146,9 @@
 				Base,
 			);
 			mainGroup = 204DBB3128F5B0E7008E921C;
+			packageReferences = (
+				204DBB4B28F5B143008E921C /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = 204DBB3B28F5B0E7008E921C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +175,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				204DBB5028F5B175008E921C /* ScrapperViewModel.swift in Sources */,
 				204DBB4028F5B0E7008E921C /* ContentView.swift in Sources */,
+				204DBB5428F5E366008E921C /* HousePlant.swift in Sources */,
 				204DBB3E28F5B0E7008E921C /* Web_soupApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +315,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +345,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +381,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		204DBB4B28F5B143008E921C /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		204DBB4C28F5B143008E921C /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 204DBB4B28F5B143008E921C /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 204DBB3228F5B0E7008E921C /* Project object */;
 }
